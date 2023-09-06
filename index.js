@@ -65,9 +65,9 @@
 // console.log(name1=="vaibhav" && name2=="shailesh"); -->fasle
 
 // console.log(name1=="vaibhav" || name2=="shailesh");
-                // false               false---------------false 
+// false               false---------------false 
 // console.log(name1=="shailesh" || name2=="rani");
-                // true                false   ---------------true 
+// true                false   ---------------true 
 // console.log(!dummy);
 
 // ternary operator 
@@ -111,3 +111,94 @@
 // switch
 // while loop
 // do-while-loop
+
+// const age = 58;
+// if (age < 18) {
+//     console.log("not less")
+// } else if (age < 34) {
+//     console.log("not less 1")
+// } else if (age <= 58) {
+//     console.log("not less 2")
+// } else {
+//     console.log("yes it is")
+// }
+
+// when we want to do iterations of work 
+
+// array  expressions 
+// for( let i=1; i<=100; i++){
+//     console.log("loop" , i)
+// }
+
+
+// let i = 0;
+// syntax 
+// while(condition){
+//     statements
+//     i++;
+// }
+
+// while(i<100){
+//     console.log(i)
+//     i++;
+// }
+
+// let i=0;
+// do{
+//     console.log(i)
+//     i++;
+// }while(i<=100)
+
+
+// switch case
+// let day = "tuesday";
+
+// switch (day) {
+//     case "monday":
+//         console.log("today is monday")
+//         break;
+//     case "tuesday":
+//         console.log("today is tuesday")
+//         break;
+//     case "wednesday":
+//         console.log("today is wednesday")
+//         break;
+//     case "thursday":
+//         console.log("today is thursday")
+//         break;
+//     case "friday":
+//         console.log("today is friday")
+//         break;
+//     case "saturday":
+//         console.log("today is saturday")
+//         break;
+//     case "sunday":
+//         console.log("today is sunday")
+//         break;
+//     default:
+//         console.log("today is holiday")
+//         break;
+// }
+
+// string ////////////////////////////////////////////////////////////////// " "
+// const name="shailesh gokhale";
+// const age=24;
+// console.log(typeof age)
+// console.log(name[0]);
+// console.log(name.length)
+
+// for (let i = 0; i < name.length; i++) {   //i=i+1 0+1
+//     console.log(name[i]);
+// }
+
+// let uppercaseName = name.toUpperCase()
+// console.log(uppercaseName);
+// console.log(uppercaseName.toLowerCase());
+// console.log(name.charAt(0));
+// console.log(name.slice(0,8))
+// const newname = name.replace("gokhale","xyz")
+// console.log(newname)
+
+// const name1 = "shailesh"
+// const name2 = "shailesh"
+// console.log(name1===name2);
