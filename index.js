@@ -1,15 +1,15 @@
 
-// data types in js 
-// number 
-// string 
-// Boolean 
+// data types in js
+// number
+// string
+// Boolean
 // undefined
 // null
 
-// types of variables in js 
+// types of variables in js
 
-// const 
-// let 
+// const
+// let
 // var
 
 // const num1 = 10;
@@ -39,7 +39,7 @@
 // myinfo.style.color = "red"
 
 // operators in js
-// arithmatic operator(+,-,*,/,%) 
+// arithmatic operator(+,-,*,/,%)
 // const num1 = 10;
 // const num2 = 20;
 
@@ -52,8 +52,8 @@
 
 
 // logical operator (&&, || , !);--------> true false
-// && --> when both conditions are true ----> true 
-// || --> when both conditions are false ----> false 
+// && --> when both conditions are true ----> true
+// || --> when both conditions are false ----> false
 // ! --> true -> false , false ->true
 
 // const name1 = "shailesh"
@@ -65,13 +65,13 @@
 // console.log(name1=="vaibhav" && name2=="shailesh"); -->fasle
 
 // console.log(name1=="vaibhav" || name2=="shailesh");
-// false               false---------------false 
+// false               false---------------false
 // console.log(name1=="shailesh" || name2=="rani");
-// true                false   ---------------true 
+// true                false   ---------------true
 // console.log(!dummy);
 
-// ternary operator 
-//  condition ? statement    :  statement 
+// ternary operator
+//  condition ? statement    :  statement
 
 // const name1 = "shailesh"
 // const name2 = "vaibhav"
@@ -92,15 +92,15 @@
 // console.log(num1<num2)  //true
 // console.log(num1<=num2)  //true    (num1<num2 || num1==num2)
 // console.log(num1>=num2)  //false    (num1>num2 || num1==num2)
-// console.log(num1==num2)  //false    
-// console.log(num1!=num2)  //false    
-// console.log(num1===num2)  //false ---> it checks value and data types 
-// console.log(num1==num3)  //true ---> it checks value only 
+// console.log(num1==num2)  //false
+// console.log(num1!=num2)  //false
+// console.log(num1===num2)  //false ---> it checks value and data types
+// console.log(num1==num3)  //true ---> it checks value only
 // console.log(num1===num3)  //false ---> it checks value and data types
 
 
-// console.log(value1==value2)  //true ---> it checks value only 
-// console.log(value1===value2)  //false ---> it checks value and data types 
+// console.log(value1==value2)  //true ---> it checks value only
+// console.log(value1===value2)  //false ---> it checks value and data types
 
 
 
@@ -123,16 +123,16 @@
 //     console.log("yes it is")
 // }
 
-// when we want to do iterations of work 
+// when we want to do iterations of work
 
-// array  expressions 
+// array  expressions
 // for( let i=1; i<=100; i++){
 //     console.log("loop" , i)
 // }
 
 
 // let i = 0;
-// syntax 
+// syntax
 // while(condition){
 //     statements
 //     i++;
@@ -202,3 +202,75 @@
 // const name1 = "shailesh"
 // const name2 = "shailesh"
 // console.log(name1===name2);
+
+// function ///////////////////////////////////////
+// normal function
+// function calc(a,b) {            //paramter value
+//     console.log(a + b)
+//     console.log(a - b)
+//     console.log(a * b)
+//     console.log(a / b)
+//     console.log(a % b)
+//     console.log("------------------------------------")
+// }
+
+// calc(100,2000); //argument
+// calc(10,2000); //argument
+// calc(109,2000); //argument
+
+
+// arrow function //////////////////////////////////////
+
+// const calc = (a,b)=>{
+//     console.log(a + b)
+//     console.log(a - b)
+//     console.log(a * b)
+//     console.log(a / b)
+//     console.log(a % b)
+//     console.log("------------------------------------")
+// }
+// calc(100,2000); //argument
+// calc(10,2000); //argument
+// calc(109,2000); //argument
+
+// first way 
+// const isEven = (number)=>{
+//     return number%2==0;
+// }
+
+
+// second way 
+// const isEven = number=> number%2==0;
+// console.log(isEven(2))
+// console.log(isEven(7))
+
+// const calc =function(a,b){
+//     console.log(a + b)
+//     console.log(a - b)
+//     console.log(a * b)
+//     console.log(a / b)
+//     console.log(a % b)
+//     console.log("------------------------------------")
+// }
+// calc(100,2000); //argument
+// calc(10,2000); //argument
+// calc(109,2000); //argument
+
+let isNegative = num => num<0;
+// console.log(isNegative(-1));
+xyz();  
+
+function xyz() {
+    function abc() {
+        console.log("this is abc")
+    }
+    console.log("this is xyz")
+    abc();
+}
+
+// let name = "shailesh";
+// console.log(window.name)
+var obj = {
+    name:"shailesh"
+}
+console.log(window.obj)
