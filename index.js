@@ -256,21 +256,100 @@
 // calc(10,2000); //argument
 // calc(109,2000); //argument
 
-let isNegative = num => num<0;
+// let isNegative = num => num<0;
 // console.log(isNegative(-1));
-xyz();  
+// xyz();  
 
-function xyz() {
-    function abc() {
-        console.log("this is abc")
-    }
-    console.log("this is xyz")
-    abc();
-}
+// function xyz() {
+//     function abc() {
+//         console.log("this is abc")
+//     }
+//     console.log("this is xyz")
+//     abc();
+// }
 
 // let name = "shailesh";
 // console.log(window.name)
-var obj = {
-    name:"shailesh"
-}
-console.log(window.obj)
+// var obj = {
+//     name:"shailesh"
+// }
+// console.log(window.obj)
+
+// callback function ////////////////////////////////////////////////
+
+// function test1(callback){
+//     console.log("test1");
+//     callback();
+// }
+
+// function myname(){
+//     console.log("vaibhav");
+// }
+// test1(myname)
+
+
+// array /////////////////////////////////////////////////////////////
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = ["vaibhav", "vinay", "jay", "raju", "bunty"];
+const arr3 = [true, false, 12345, "vaibhav", { name: "shailesh", age: 24 }];
+// console.log(arr[0])
+// const newarr = [...arr];
+// console.log(newarr)
+
+// second way of cloning
+// let newarr =arr.slice(0);
+// console.log(users2);
+
+// second way of cloning
+
+// let newarr = [].concat(arr);
+// console.log(newarr);
+
+// const newarr = [...arr1, ...arr2, ...arr3, "shailesh", "arno"];
+// console.log(newarr);
+
+// console.log(newarr[newarr.length-1])
+// for (let i = 0; i < newarr.length; i++) {
+//     // console.log(newarr[i])
+//     if (newarr[i] === "shailesh") {
+//         console.log(newarr[i]);
+//     }
+// }
+
+// const result = newarr.includes("xyz");
+// console.log(result);
+// if(result){
+//     console.log("present")
+// }else{
+//     console.log("not present");
+// }
+
+const newarr = [...arr1, ...arr2, ...arr3, "shailesh", "arno"];
+// newarr.push("shweta");
+// newarr.unshift("xyz");
+// newarr.shift("xyz");
+// const poppedElement = newarr.pop();
+// // slicedElement = newarr.slice(0,6);
+// // console.log(slicedElement)
+// newarr.splice(newarr.length-2,2,["vaibhav","abc","mno",1000,200]);
+// console.log(newarr);
+
+// forIn loop ////////////////////////////////////////////////////
+// for(let index in newarr){
+//     console.log(newarr[index]);
+// }
+
+// for of loop////////////////////////////////////////////////////
+// for(let item of newarr){
+//     console.log(item);
+// }
+
+// function iterate(value){
+//     console.log(value);
+// }
+// const iterate=(value)=>{
+//     console.log(value);
+// }
+// newarr.forEach(iterate);
+
+// newarr.forEach((item,index)=>console.log(item,index));
