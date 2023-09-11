@@ -324,7 +324,7 @@ const arr3 = [true, false, 12345, "vaibhav", { name: "shailesh", age: 24 }];
 //     console.log("not present");
 // }
 
-const newarr = [...arr1, ...arr2, ...arr3, "shailesh", "arno"];
+// const newarr = [...arr1, ...arr2, ...arr3, "shailesh", "arno"];
 // newarr.push("shweta");
 // newarr.unshift("xyz");
 // newarr.shift("xyz");
@@ -353,3 +353,100 @@ const newarr = [...arr1, ...arr2, ...arr3, "shailesh", "arno"];
 // newarr.forEach(iterate);
 
 // newarr.forEach((item,index)=>console.log(item,index));
+
+// Object//////////////////////////////////////////////////////////////
+
+// const user = {
+//     "name":"shailesh",
+//     age:24,
+//     address:"nagpur"
+// }
+
+// console.log(`My name is ${user.name} and age is ${user.age}, I live in ${user.address}`);
+
+// first way to add data in object 
+// const newuser = {};
+// newuser.name = "vaibhav";
+// newuser.age = 24;
+// newuser.address = "nagpur";
+// console.log(newuser);
+
+// second way to add data in object 
+// const newuser = {};
+// newuser["4g signal"] = "yes";
+// newuser["name"] = "swapnil";
+// newuser["age"] = 24;
+// newuser["living address"] = "amravati";
+// console.log(newuser["4g signal"]);
+
+// Object methods /////////////////////////////
+// const newUserKeys = Object.keys(newuser);
+// console.log(newUserKeys);
+
+// for (const item of newUserKeys) {
+//     console.log(newuser[item]);
+// }
+
+// const values = Object.values(newuser)
+// console.log(values);
+
+// const userList = [
+//     {
+//         "name": "shailesh",
+//         age: 24,
+//         address: "nagpur"
+//     },
+//     {
+//         "name": "vaibhav",
+//         age: 24,
+//         address: "nagpur"
+//     },
+//     {
+//         "name": "sanyukta",
+//         age: 24,
+//         address: "nagpur"
+//     },
+//     {
+//         "name": "swapnil",
+//         age: 24,
+//         address: "nagpur"
+//     },
+//     {
+//         "name": "harsh",
+//         age: 24,
+//         address: "nagpur"
+//     },
+// ]
+
+// console.log(userList)
+
+// for(let i=0;i<userList.length;i++){
+//     console.log(userList[i].name);
+//     console.log(userList[i].age);
+// }
+
+
+// spread operator using in object ///////////////////////////////
+// let obj = {
+//     "name": "harsh",
+//     age: 24,
+//     address: "nagpur"
+// }
+
+// const newobj = {...obj};
+// newobj.name = "vaibhav"
+// console.log(obj)
+// console.log(newobj)
+
+// object distructuring  ///////////////////////////////
+// let obj = {
+//     "name": "harsh",
+//     age: 24,
+//     address: "nagpur",
+//     adhar:"982173 2398 2323",
+//     phone:"98217323982323",
+//     DOB:new Date(),
+// }
+
+// const { name, age, address,...props } = obj;
+// console.log(props);
