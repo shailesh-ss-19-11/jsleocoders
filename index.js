@@ -289,9 +289,9 @@
 
 
 // array /////////////////////////////////////////////////////////////
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = ["vaibhav", "vinay", "jay", "raju", "bunty"];
-const arr3 = [true, false, 12345, "vaibhav", { name: "shailesh", age: 24 }];
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = ["vaibhav", "vinay", "jay", "raju", "bunty"];
+// const arr3 = [true, false, 12345, "vaibhav", { name: "shailesh", age: 24 }];
 // console.log(arr[0])
 // const newarr = [...arr];
 // console.log(newarr)
@@ -323,6 +323,17 @@ const arr3 = [true, false, 12345, "vaibhav", { name: "shailesh", age: 24 }];
 // }else{
 //     console.log("not present");
 // }
+
+// const arr = ["shailesh","vaibhav","swapnil","xyz","abc","mno"];
+// skip dataon index2
+// const [name1, ,name2,name3] = arr
+
+// const [name1,name2,name3,...otherdata] = arr;
+// console.log(name1);
+// console.log(name2);
+// console.log(name3);
+// console.log(otherdata);
+
 
 // const newarr = [...arr1, ...arr2, ...arr3, "shailesh", "arno"];
 // newarr.push("shweta");
@@ -450,3 +461,114 @@ const arr3 = [true, false, 12345, "vaibhav", { name: "shailesh", age: 24 }];
 
 // const { name, age, address,...props } = obj;
 // console.log(props);
+
+// for in loop in object //////////////////////////////////////////////
+
+// let obj = {
+//     "name": "harsh",
+//     age: 24,
+//     address: "nagpur",
+//     adhar: "982173 2398 2323",
+//     phone: "98217323982323",
+//     DOB: new Date(),
+// }
+
+
+// for(let keys in obj){
+//     console.log(keys +" : "+obj[keys]);
+// }
+// for(let keys in Object.keys(obj)){
+//     // console.log(keys +" : "+obj[keys]);
+//     console.log(Object.keys(obj)[keys] +" "+ obj[Object.keys(obj)[keys]]);
+// }
+
+// const keysarr = Object.keys(obj);
+// // console.log(keysarr)
+// for (let i in keysarr) {
+//     console.log(`${keysarr[i]} : ${obj[keysarr[i]]}`);
+// }
+
+// const key1 = "name";
+// const key2 = "email"
+// const key3 = "password"
+
+// const value1 = "shailesh"
+// const value2 = "email@email.com"
+// const value3 = "123"
+
+// const obj = {
+//     [key1]:value1,
+//     [key2]:value2,
+//     [key3]:value3
+// };
+// console.log(obj)
+
+// let obj = {};
+// obj[key1] = value1
+// obj[key2] = value2
+// obj[key3] = value3
+// console.log(obj);
+
+// const userList = [
+//     {
+//         "name": "shailesh",
+//         age: 24,
+//         address: "nagpur"
+//     },
+//     {
+//         "name": "vaibhav",
+//         age: 24,
+//         address: "wardha"
+//     },
+//     {
+//         "name": "sanyukta",
+//         age: 24,
+//         address: "wardha"
+//     },
+//     {
+//         "name": "swapnil",
+//         age: 24,
+//         address: "nagpur"
+//     },
+//     {
+//         "name": "harsh",
+//         age: 24,
+//         address: "nagpur"
+//     },
+// ]
+
+// for each method is use for iterate like for loop
+// it doesn't return new array
+// userList.forEach((user)=>{
+//     if(user.name=="swapnil"){
+//         console.log("he is gentaleman");
+//     }
+// });
+
+
+// map method ///////////////////////////////////////////////////////////////////////////
+// it return new array
+// let newuserlist = userList.map((user)=>{
+// //    user.age = 25
+//     if(user.name=="swapnil"){
+//         user.name = "tejas"
+//     }
+//    return user;
+// })
+// console.log(newuserlist)
+
+// filter method /////////////////////////////////////////////////////////////////////////
+// it returns filter data in the sense of string, object, anything 
+// const filteredusers = userList.filter((user)=>user.address=="wardha");
+// console.log(filteredusers,"filteredusers");
+
+// let products = [
+//     {price:"200000",name:"watch",brand:"hublot"},
+//     {price:"2000",name:"nirma",brand:"Rin"},
+//     {price:"150",name:"shoes",brand:"rebook"},
+//     {price:"100000",name:"rapido",brand:"skoda"},
+//     {price:"15000",name:"slipper",brand:"BMW"},
+// ]
+
+// const pricegreater2000 = products.filter((product)=>product.price>2000);
+// console.log(pricegreater2000);
