@@ -233,13 +233,13 @@
 // calc(10,2000); //argument
 // calc(109,2000); //argument
 
-// first way 
+// first way
 // const isEven = (number)=>{
 //     return number%2==0;
 // }
 
 
-// second way 
+// second way
 // const isEven = number=> number%2==0;
 // console.log(isEven(2))
 // console.log(isEven(7))
@@ -258,7 +258,7 @@
 
 // let isNegative = num => num<0;
 // console.log(isNegative(-1));
-// xyz();  
+// xyz();
 
 // function xyz() {
 //     function abc() {
@@ -375,14 +375,14 @@
 
 // console.log(`My name is ${user.name} and age is ${user.age}, I live in ${user.address}`);
 
-// first way to add data in object 
+// first way to add data in object
 // const newuser = {};
 // newuser.name = "vaibhav";
 // newuser.age = 24;
 // newuser.address = "nagpur";
 // console.log(newuser);
 
-// second way to add data in object 
+// second way to add data in object
 // const newuser = {};
 // newuser["4g signal"] = "yes";
 // newuser["name"] = "swapnil";
@@ -558,7 +558,7 @@
 // console.log(newuserlist)
 
 // filter method /////////////////////////////////////////////////////////////////////////
-// it returns filter data in the sense of string, object, anything 
+// it returns filter data in the sense of string, object, anything
 // const filteredusers = userList.filter((user)=>user.address=="wardha");
 // console.log(filteredusers,"filteredusers");
 
@@ -572,3 +572,85 @@
 
 // const pricegreater2000 = products.filter((product)=>product.price>2000);
 // console.log(pricegreater2000);
+
+
+// methods in object ///////////////////////////////////////////////////////////////////////////
+
+// const user = {
+//     name: "shailesh",
+//     age:12,
+//     address: "nagpur",
+//     hobbies: ["cricket", "jjjj"],
+//     userinfo: function () {
+//         console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+//     },
+//     isage18: function () {
+//         return this.age > 18;
+//     },
+//     isfromNagpur: function () {
+//         return this.address === "nagpur";
+//     }
+// }
+
+// user.userinfo();
+// const checkage = user.isage18();
+// console.log(checkage);
+// console.log(user.isfromNagpur());
+
+// compressing and saprating  code
+
+// const usermethods = {
+//     userinfo() {
+//         console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+//     },
+//     isage18() {
+//         return this.age > 18;
+//     },
+//     isfromNagpur() {
+//         return this.address === "nagpur";
+//     }
+// }
+
+// const user = {
+//     name: "shailesh",
+//     age: 12,
+//     address: "nagpur",
+//     hobbies: ["cricket", "jjjj"],
+//     userinfo: usermethods.userinfo,
+//     is18: usermethods.isage18,
+// }
+
+// user.userinfo();
+// console.log(user.is18());
+
+
+// creating multiple user //////////////////////////////////////////////////
+const usermethods = {
+    userinfo() {
+        console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+    },
+    isage18() {
+        return this.age > 18;
+    },
+    isfromNagpur() {
+        return this.address === "nagpur";
+    }
+}
+
+function createUser(name, age, address, hobbies) {
+    let user = {};
+    user.name = name;
+    user.age = age;
+    user.address = address;
+    user.hobbies = hobbies;
+    user.is18 = usermethods.isage18;
+    user.userinfo = usermethods.userinfo;
+    return user;
+}
+
+const user1 = createUser("shailesh", 24, "nagpur", ["abc", "xyz"]);
+const user2 = createUser("vaibhav", 24, "nagpur", ["abc", "xyz"]);
+const user3 = createUser("swapnil", 24, "nagpur", ["abc", "xyz"]);
+const user4 = createUser("sayukta", 24, "nagpur", ["abc", "xyz"]);
+const user5 = createUser("janvi", 24, "nagpur", ["abc", "xyz"]);
+const user6 = createUser("arno", 24, "nagpur", ["abc", "xyz"]);
