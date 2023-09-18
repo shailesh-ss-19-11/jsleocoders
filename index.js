@@ -34,10 +34,6 @@
 // console.log("my name is"+" " +name +"and age is"+" "+age+" I live in "+address );
 // console.log(`my name is ${name} and age is ${age} I live in ${address}`);
 
-// const myinfo = document.querySelector("#myinfo");
-// myinfo.innerText = `my name is ${name} and age is ${age} I live in ${address}`
-// myinfo.style.color = "red"
-
 // operators in js
 // arithmatic operator(+,-,*,/,%)
 // const num1 = 10;
@@ -625,32 +621,167 @@
 
 
 // creating multiple user //////////////////////////////////////////////////
-const usermethods = {
-    userinfo() {
-        console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
-    },
-    isage18() {
-        return this.age > 18;
-    },
-    isfromNagpur() {
-        return this.address === "nagpur";
-    }
-}
+// const usermethods = {
+//     userinfo() {
+//         console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+//     },
+//     isage18() {
+//         return this.age > 18;
+//     },
+//     isfromNagpur() {
+//         return this.address === "nagpur";
+//     }
+// }
 
-function createUser(name, age, address, hobbies) {
-    let user = {};
-    user.name = name;
-    user.age = age;
-    user.address = address;
-    user.hobbies = hobbies;
-    user.is18 = usermethods.isage18;
-    user.userinfo = usermethods.userinfo;
-    return user;
-}
+// function createUser(name, age, address, hobbies) {
+//     let user = {};
+//     user.name = name;
+//     user.age = age;
+//     user.address = address;
+//     user.hobbies = hobbies;
+//     user.is18 = usermethods.isage18;
+//     user.userinfo = usermethods.userinfo;
+//     return user;
+// }
 
-const user1 = createUser("shailesh", 24, "nagpur", ["abc", "xyz"]);
-const user2 = createUser("vaibhav", 24, "nagpur", ["abc", "xyz"]);
-const user3 = createUser("swapnil", 24, "nagpur", ["abc", "xyz"]);
-const user4 = createUser("sayukta", 24, "nagpur", ["abc", "xyz"]);
-const user5 = createUser("janvi", 24, "nagpur", ["abc", "xyz"]);
-const user6 = createUser("arno", 24, "nagpur", ["abc", "xyz"]);
+// const user1 = createUser("shailesh", 24, "nagpur", ["abc", "xyz"]);
+// const user2 = createUser("vaibhav", 24, "nagpur", ["abc", "xyz"]);
+// const user3 = createUser("swapnil", 24, "nagpur", ["abc", "xyz"]);
+// const user4 = createUser("sayukta", 24, "nagpur", ["abc", "xyz"]);
+// const user5 = createUser("janvi", 24, "nagpur", ["abc", "xyz"]);
+// const user6 = createUser("arno", 24, "nagpur", ["abc", "xyz"]);
+
+
+// let obj={};
+
+// let obj2 = {
+//     key1:"value1",
+//     key2:"value2"
+// }
+
+// obj = Object.create(obj2)
+// obj.name = "shailesh";
+// console.log(obj);
+
+
+
+
+// __Proto__/////////////////////////////////////////////////////////////////////////////
+// const usermethods = {
+//     userinfo() {
+//         console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+//     },
+//     isage18() {
+//         return this.age > 18;
+//     },
+//     isfromNagpur() {
+//         return this.address === "nagpur";
+//     }
+// }
+
+// function createUser(name, age, address, hobbies) {
+//     let user = Object.create(usermethods);
+//     user.name = name;
+//     user.age = age;
+//     user.address = address;
+//     user.hobbies = hobbies;
+//     user.isage18 = usermethods.isage18;
+//     return user;
+// }
+
+// const user1 = createUser("shailesh", 24, "nagpur", ["abc", "xyz"]);
+
+// prototype ///////////////////////////////////////////////////////////////////////////////////////////
+// function has its own free space ////////////////////////////////////////////////////////////////////
+// in js everything is object /////////////////////////////////////////////////////////////////////////
+// function has prototype which is object
+
+// function createUser(name, age, address, hobbies) {
+//     let user = Object.create(createUser.prototype);
+//     user.name = name;
+//     user.age = age;
+//     user.address = address;
+//     user.hobbies = hobbies;
+//     return user;
+// }
+
+// createUser.prototype.userinfo = function () {
+//     console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+// }
+// createUser.prototype.isage18 = function () {
+//     console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+// }
+// createUser.prototype.isfromNagpur = function () {
+//     console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+// }
+// const user1 = createUser("shailesh", 24, "nagpur", ["abc", "xyz"]);
+// user1.userinfo();
+
+
+// new keyword /////////////////////////////////////////////////
+// provide this = {};
+// new return itself with this{} object
+
+// function createUser(name, age, address, hobbies) {
+//     this.name = name;
+//     this.age = age;
+//     this.address = address;
+//     this.hobbies = hobbies;
+// }
+
+// createUser.prototype.userinfo = function () {
+//     console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+// }
+// createUser.prototype.isage18 = function () {
+//     console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+// }
+// createUser.prototype.isfromNagpur = function () {
+//     console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+// }
+
+
+// const user1 = new createUser("shailesh", 24, "nagpur", ["abc", "xyz"]);
+// console.log(user1);
+
+// user1.isage18();
+
+// const newarr = [1,2,3,4,5,6];
+// console.log(typeof newarr);
+// const arr = new Array(1,2,4,5,6,7);
+// console.log(arr);
+// console.log(Array.isArray(arr));
+
+// oops concept //////////////////////////////////////////////////////////////////////////////////
+// class 
+// object 
+// encapsulation ---- binding the data and functions together
+// inheritance
+
+// class data members and member function , constructor , super();
+// constructor ------ special member function , which initialize the object
+
+// class CreateUser {
+//     constructor(name, age, address, hobbies) {
+//         this.name = name;
+//         this.age = age;
+//         this.address = address;
+//         this.hobbies = hobbies;
+//     }
+
+//     userinfo = function () {
+//         console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+//     }
+//     isage18 = function () {
+//         console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+//     }
+//     isfromNagpur = function () {
+//         console.log(`my name is ${this.name} and my age is ${this.age} I live in ${this.address} my hobbies are ${this.hobbies}`);
+//     }
+// }
+
+// const user1 = new CreateUser("shailesh", 24, "nagpur", ["xyz", "abc"]);
+// user1.userinfo();
+
+
+document.linkColor = "red"
+console.dir(document);
