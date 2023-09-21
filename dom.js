@@ -1,53 +1,86 @@
-// access HTML elements in js 
+// access HTML elements in js
 // 1. by id ------------- id denoted by #
 // 2. by class ------------- class denoted by (.)
-// 3. by tagname  
-// 4. by attribute  
+// 3. by tagname
+// 4. by attribute
 
 // console.log(document);
 
-const myinfo = {
-    name: "shailesh",
-    age: 24,
-    address: "nagpur"
-}
+// const myinfo = {
+//     name: "shailesh",
+//     age: 24,
+//     address: "nagpur"
+// }
 
 
-// mybutton.addEventListener("click",function(){
-//     alert();
+// // mybutton.addEventListener("click",function(){
+// //     alert();
+// // })
+
+// const mybutton = document.getElementById("changeinformation");
+// mybutton.addEventListener("click", changeinfo)
+
+// function changeinfo() {
+//     const getmyinfo = document.getElementById("myinfo");
+//     getmyinfo.textContent = `My name is ${myinfo.name} and my age is ${myinfo.age} I live in ${myinfo.address}`;
+// }
+
+
+// function changeStyle() {
+//     const getmyinfo = document.getElementById("myinfo");
+//     getmyinfo.style.backgroundColor = "#ff6666";
+//     getmyinfo.style.border = "1px solid black";
+//     getmyinfo.style.borderRadius = "10px";
+//     getmyinfo.style.padding = "15px";
+
+
+//     const mybutton = document.getElementById("changeinformation");
+//     console.dir(mybutton);
+//     mybutton.style.backgroundColor = "#ff6666";
+//     mybutton.style.border = "1px solid black";
+//     mybutton.style.borderRadius = "10px";
+//     mybutton.style.padding = "15px";
+//     mybutton.textContent = "Change Information";
+// }
+
+// function hideElement(){
+//     const getmyinfo = document.getElementById("myinfo");
+//     getmyinfo.style.display = "none";
+// }
+// function showElement(){
+//     const getmyinfo = document.getElementById("myinfo");
+//     getmyinfo.style.display = "block";
+// }
+
+// getElementBy class //////////////////////////////////////////////////////////////////////////////
+
+// const sociallinks = document.getElementsByClassName("link");
+
+// console.log(Array.isArray(sociallinks));
+// let collection = [...sociallinks];
+// console.log(Array.isArray(collection));
+
+// // for (let i = 0; i < sociallinks.length; i++) {
+// //     console.log(sociallinks[i]);
+// //     if (sociallinks[i].host == "snapchat.app") {
+// //         console.log(sociallinks);
+// //         sociallinks[5].style.backgroundColor = "yellow"
+// //         sociallinks[5].style.color = "black"
+// //     }
+// // }
+
+// const snapchat = collection.filter((element) => element.host == "snapchat.app")
+// console.log(snapchat, "snapchatsnapchatsnapchat")
+// snapchat[0].style.backgroundColor = "yellow"
+// snapchat[0].style.color = "black"
+// collection.forEach((element) => {
+//     if (element.host == "snapchat.app") {
+//         sociallinks[5].style.backgroundColor = "yellow"
+//         sociallinks[5].style.color = "black"
+//     }
 // })
 
-const mybutton = document.getElementById("changeinformation");
-mybutton.addEventListener("click", changeinfo)
 
-function changeinfo() {
-    const getmyinfo = document.getElementById("myinfo");
-    getmyinfo.textContent = `My name is ${myinfo.name} and my age is ${myinfo.age} I live in ${myinfo.address}`;
-}
-
-
-function changeStyle() {
-    const getmyinfo = document.getElementById("myinfo");
-    getmyinfo.style.backgroundColor = "#ff6666";
-    getmyinfo.style.border = "1px solid black";
-    getmyinfo.style.borderRadius = "10px";
-    getmyinfo.style.padding = "15px";
-
-
-    const mybutton = document.getElementById("changeinformation");
-    console.dir(mybutton);
-    mybutton.style.backgroundColor = "#ff6666";
-    mybutton.style.border = "1px solid black";
-    mybutton.style.borderRadius = "10px";
-    mybutton.style.padding = "15px";
-    mybutton.textContent = "Change Information";
-}
-
-function hideElement(){
-    const getmyinfo = document.getElementById("myinfo"); 
-    getmyinfo.style.display = "none";  
-}
-function showElement(){
-    const getmyinfo = document.getElementById("myinfo"); 
-    getmyinfo.style.display = "block";  
-}
+const myinfo = document.getElementById("myinfo");
+console.dir(myinfo);
+myinfo.textContent = "hellow world"
