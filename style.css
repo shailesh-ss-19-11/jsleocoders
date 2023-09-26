@@ -1,0 +1,65 @@
+body{
+    box-sizing: border-box;
+}
+.heading{
+    color: aquamarine;
+    background-color: black;
+}
+.border-red{
+    border: 3px solid red;
+}
+.link{
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    
+    margin-top: 10px;
+}
+
+.url{
+    border-radius: 10px;
+}
+
+.input-items{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+.todo-input{
+    width: 80%;
+    border: 0.5px solid grey;
+}
+todo-input:focus-within{
+    border: 0.5px solid black;
+}
+.btn{
+    width: 20%;
+    
+}
+.btn-dark{
+    background-color: black;
+    color: white;
+    border: 0.5px solid grey;
+    font-size: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+#todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    margin: auto;
+    list-style-type: none;
+}
+#todo-list li{
+    background-color: antiquewhite;
+    border: 0.5px solid black;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 12px;
+}
