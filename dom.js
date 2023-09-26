@@ -138,3 +138,96 @@
 //     element.classList.add("border-red");
 //     element.classList.remove("heading");
 // }
+
+// dom tree /////////////////////////////////////////////////////////////////////////
+
+// const rootNode = document.getRootNode();
+// // // console.dir(rootNode);
+// const htmlElementNode = rootNode.childNodes[1];
+// console.log(htmlElementNode.children); //NodeList(3) [head, text, body]
+// const headElementNode = htmlElementNode.childNodes[0];
+// const textNode1 = htmlElementNode.childNodes[1];
+// const bodyElementNode = htmlElementNode.childNodes[2];
+
+// console.log(headElementNode)
+// console.log(bodyElementNode.childNodes)
+// bodyElementNode.childNodes[5].textContent = "Google Universe";
+// console.log(headElementNode.childNodes);
+
+// // sibling relation ///////////////////////////////////
+// const h3 = document.querySelector("h3");
+// console.log(h3.nextSibling.nextSibling.nextSibling.nextSibling);
+// let a1 = h3.nextSibling.nextSibling.nextSibling.nextSibling;
+// a1.style.color="red"
+
+
+// adding element in html using js /////////////////////////////////////////////////////
+// createelement first way/////////////
+// const newElement = document.querySelector("#new-element");
+// console.log(newElement);
+// newElement.innerHTML = "<h1>Sayukta Lakhe</h1>"
+// newElement.innerHTML += "<h1>Swapnil</h1>"
+// newElement.innerHTML += "<h1>vaibhav</h1>"
+// newElement.innerHTML += "<h1>janvi</h1>"
+// newElement.append(`<h1>janvi</h1>`)
+
+// create element in javascript ////////////////////////////////////
+// createelement second / way///////////////////////////////////////////
+// append prepend remove /////////////////////////////////
+for (let i = 0; i < 10; i++) {
+    const todoItem = document.createElement("li");
+    todoItem.textContent = `task ${i}`;
+    const todoList = document.querySelector("#todo-list");
+    // todoList.append(todoItem);
+    todoList.prepend(todoItem);
+}
+
+// remove //////////////////////
+// const todoList = document.querySelector("#todo-list");
+// todoList.remove("li");
+
+// createelement third way //////////////////////////////////
+// afterbegin 
+// beforebegin
+// afterend
+// beforeend
+
+// const todoList = document.querySelector("#todo-list");
+// // todoList.insertAdjacentHTML("beforeend","<li>todo 1</li>")
+// const todoItem = document.createElement("li");
+// todoItem.textContent="task 10"
+// todoList.insertAdjacentElement("beforeend",todoItem);
+
+// sync programming 
+// console.log("async start")
+// console.log("async check")
+// for (let i = 0; i < 10000; i++) {
+//     console.log("i");
+// }
+// console.log("async end")
+
+// console.log("async start")   //1st
+// setTimeout(()=>{
+//     console.log("timeout"); //3rd
+// },1000)
+// console.log("async end") //2nd
+
+
+// async function xyz() {
+//     for (let i = 0; i < 10000; i++) {
+//         console.log("i");
+//     }
+//     await console.log("hello world");
+// }
+
+// console.log("start")
+// xyz();
+// console.log("end")
+
+
+// const changeview = document.querySelector("#changeview");
+// changeview.style.display = "none"
+// setTimeout(()=>{
+//     const changeview = document.querySelector("#changeview");
+//     changeview.style.display = "block"
+// },10000)
