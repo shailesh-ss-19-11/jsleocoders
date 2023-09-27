@@ -213,6 +213,8 @@ for (let i = 0; i < 10; i++) {
 // console.log("async end") //2nd
 
 
+
+// async programming /////////////////////////////////////////////////////////////////////////
 // async function xyz() {
 //     for (let i = 0; i < 10000; i++) {
 //         console.log("i");
@@ -231,3 +233,125 @@ for (let i = 0; i < 10; i++) {
 //     const changeview = document.querySelector("#changeview");
 //     changeview.style.display = "block"
 // },10000)
+
+
+// function resolveAfter2Seconds() {
+//     return new Promise((resolve) => {
+//       setTimeout(() => {
+//         resolve('async checked');
+//       }, 2000);
+//     });
+//   }
+
+//   async function asyncCall() {
+//     console.log('calling');
+//     const result = await resolveAfter2Seconds();
+//     console.log(result);
+//     console.log("xyz");
+//     // Expected output: "resolved"
+//   }
+
+//   asyncCall();
+
+
+// API ////////////////////////////////////////////////////////////////////////////////
+// api is nothing but the url /////////////////////////////////////////////////////////
+// transport medium of frontend and backend 
+// full form //////////////// application program interface 
+
+// methods for api crud
+// get --->for getting data
+// post --->for add data
+// put --->update existing data
+// patch --->update existing data
+// delete --->delete existing data
+
+
+// fetch method 
+
+// async function userData() {
+//     const response = await fetch("https://retoolapi.dev/jORbdI/data");
+//     console.log(response);
+//     const result = await response.json();
+//     console.table(result);
+//   }
+
+// userData();
+// get method implemented //////////////////////////////////////////////////
+function getuserdetails() {
+    fetch("https://retoolapi.dev/jORbdI/data").then((response) => {
+        return response.json()
+    }).then((result) => console.table(result));
+}
+getuserdetails();
+
+
+// post method implemented ///////////////////////////////////////////////////
+// const addUser = () => {
+//     let userdata = {
+//         address: "kanhan",
+//         age: 50,
+//         dob: new Date(),
+//         name: "shivani",
+//         phone: "9878767654"
+//     }
+
+//     fetch("https://retoolapi.dev/jORbdI/data", {
+//         method: "post",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body:JSON.stringify(userdata)
+//     }).then((response)=>{
+//         console.log(response,"response");
+//         if(response.status===201 || response.status===200){
+//             getuserdetails();
+//         }
+//         return response.json()
+//     }).then((result)=>console.log(result));
+// }
+
+// addUser();
+
+// delete method implemented ///////////////////////////////////////////////////
+// function deleteUser (){
+//     fetch("https://retoolapi.dev/jORbdI/data/52", {
+//         method: "delete",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//     }).then((response)=>{
+//         console.log(response,"response");
+//         if(response.status===201 || response.status===200){
+//             getuserdetails();
+//         }
+//         return response.json()
+//     }).then((result)=>console.log(result));
+// }
+// deleteUser ();
+
+
+// update data /////////////////////////////////////////////////////////////////////////////////////
+// function updateUser() {
+//     let userdata = {
+//         address: "nanadanvan",
+//         age: 50,
+//         dob: new Date(),
+//         name: "sakshi",
+//         phone: "23482347"
+//     }
+//     fetch("https://retoolapi.dev/jORbdI/data/49", {
+//         method: "put",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body:JSON.stringify(userdata)
+//     }).then((response) => {
+//         console.log(response, "response");
+//         if (response.status === 201 || response.status === 200) {
+//             getuserdetails();
+//         }
+//         return response.json()
+//     }).then((result) => console.log(result));
+// }
+// updateUser();
