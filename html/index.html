@@ -5,178 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./../js/index.js" defer></script>
+    <!-- <script src="dom.js" defer></script>
+    <link rel="stylesheet" href="./style.css"> -->
 </head>
 
 <body>
-    <center>
-        <h1>Tiger</h1>
-        <img src="./assets/img/tiger.jpg" alt="" width="150px" height="">
-    </center>
-    <p><b><i><u><del><mark>Lorem ipsum dolor sit</mark></del></u></i></b>, amet consectetur adipisicing elit. Distinctio
-        pariatur
-        commodi recusandae obcaecati aut
-        enim id magnam ea eos nam? Quia expedita cupiditate incidunt a quo sint vero nobis ut magni iusto quasi repellat
-        veritatis ea labore deleniti, saepe iste dolores. Deserunt similique perspiciatis illo nobis tempora quis a ad
-        fugit pariatur, modi placeat aut, dolorum alias soluta laboriosam magnam nostrum deleniti enim praesentium atque
-        excepturi obcaecati itaque recusandae? Maxime esse eos officiis quia, optio nam provident nihil. Quisquam
-        nostrum aut eveniet sit, vero distinctio! Eius tempora alias, doloribus ut, fuga id corporis laboriosam iure
-        expedita repudiandae eum sunt neque!</p>
-    <h2>heading</h2>
-    <h3>heading</h3>
-    <h4>heading</h4>
-    <h5>heading</h5>
-    <h6>heading</h6>
-    <a href="https://google.com">Google</a>
-    <!-- list  -->
-    <!-- 2types order and unorder  -->
-    <ol>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-    </ol>
-    <ul>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
-        <li>item 1</li>
+    <h3 id="myinfo" class="heading">hello</h3>
+    <!-- <div class="parent-grid">
+        <div>hello</div>
+    </div> -->
+    <a href="https://google.co.in" class="link url">Google</a>
+    <a href="https://facebook.co.in" class="link url">Facebook</a>
+    <a href="https://facebook.co.in" class="link url">hike</a>
+    <a href="https://facebook.co.in" class="link url">whatsapp</a>
+    <a href="https://facebook.co.in" class="link url">instagram</a>
+    <a href="https://snapchat.app" class="link url">snapchat</a>
+    <button href="https://google.co.in" class="link url">twitter</button>
+    <button href="https://google.co.in" class="link url">telegram</button>
+    <a href="adduser.html" class="link url">Add User</a>
+    <a href="viewusers.html" class="link url">View Users</a>
+    <!-- <button onclick="changeinfo()">Chnage information</button> -->
+    <br>
+    <!-- <button id="changeinformation">Chnage information</button> <br><br>
+    <button onclick="changeStyle()">Chnage style</button> <br><br>
+    <button onmouseover="hideElement()">Hide Element</button> <br>
+    <button onmouseout="showElement()">show Element</button> <br> -->
+    <button id="changeview" onclick="changeclass()">change view</button>
+    <div id="new-element">
+
+    </div>
+
+    <div class="input-items">
+        <input type="text" class="todo-input">
+        <button class="btn btn-dark">Add</button>
+    </div>
+    <ul id="todo-list">
     </ul>
-
-    <table border="1">
-        <thead>
-            <tr>
-                <th rowspan="2">Sr. No</th>
-                <th>Name</th>
-                <th>Address</th>
-            </tr>
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Shailesh</td>
-                <td>nagpur</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Shailesh</td>
-                <td>nagpur</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Shailesh</td>
-                <td>nagpur</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Shailesh</td>
-                <td>nagpur</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Shailesh</td>
-                <td>nagpur</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Shailesh</td>
-                <td>nagpur</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-        hello
-    </div>
-    <div>
-        world
-    </div>
-
-    <span>
-        hello
-    </span>
-    <span>
-        world
-    </span>
-    <audio controls>
-        <source src="./assets/audio/Ram Siya Ram - Sachet Tandon 128 Kbps.mp3" type="audio/mpeg">
-    </audio>
-    <video width="320" height="240" controls>
-        <source src="./assets/video/pexels-tima-miroshnichenko-6536647 (240p).mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-    </video>
-    <form method="post">
-        <div style="display: flex ; flex-direction: column; gap: 10px;width: 500px; margin: auto;">
-            <input type="text" placeholder="enter name">
-            <input type="password" placeholder="enter password">
-            <input type="email" placeholder="enter email">
-            <input type="date" placeholder="enter email">
-            <input type="time" placeholder="enter email">
-            <div>
-                <label for="">Hobbies</label> <br>
-                <input type="checkbox" placeholder="enter email">
-                <label for="">Cricket</label>
-                <input type="checkbox" placeholder="enter email">
-                <label for="">Football</label>
-                <input type="checkbox" placeholder="enter email">
-                <label for="">hocky</label>
-                <input type="checkbox" placeholder="enter email">
-                <label for="">sleeping</label>
-                <input type="checkbox" placeholder="enter email">
-                <label for="">Running</label>
-                <input type="checkbox" placeholder="enter email">
-                <label for="">dancing</label>
-            </div>
-            <select name="" id="">
-                <option value="">option 1</option>
-                <option value="">option 2</option>
-                <option value="">option 3</option>
-                <option value="">option 4</option>
-                <option value="">option 5</option>
-                <option value="">option 6</option>
-                <option value="">option 7</option>
-                <option value="">option 8</option>
-                <option value="">option 9</option>
-                <option value="">option 10</option>
-            </select>
-            <div>
-                <label for="">male</label>
-                <input type="radio" name="gender" id="gender">
-                <label for="">female</label>
-                <input type="radio" name="gender" id="gender">
-                <label for="">other</label>
-                <input type="radio" name="gender" id="gender">
-            </div>
-
-            <input type="file" name="" id="file" hidden>
-            <label for="file">select file</label>
-
-            <input type="button" value="submit">
-        </div>
-    </form>
-
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.5277483664395!2d79.11772577404908!3d21.131385884248136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1e22b43abfb%3A0x4ef0f31bdcb4af9b!2sLeo%20Coders%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1696311347458!5m2!1sen!2sin"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
 </body>
 
 </html>
